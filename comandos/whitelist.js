@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 module.exports.run = async (bot, message, args) => {
     let con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "",
-        database: "allstar"
+        host: "IP_HOST",
+        user: "USER_NAME",
+        password: "PASS_USER",
+        database: "DATABASE_NAME"
     })
 con.connect(function(err) {
     if(err) {
