@@ -1,6 +1,6 @@
-const cheerio = require("cheerio");
-const Discord = require("discord.js");
-const rp = require("request-promise");
+const cheerio = require("cheerio"); // npm install cheerio
+const Discord = require("discord.js"); // npm install discord.js
+const rp = require("request-promise"); // npm i request-promise
 
 const URL = "https://www.trackyserver.com/server/sdasdas-473370";
 module.exports.run = async (bot, message, args) => {
