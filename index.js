@@ -1,9 +1,6 @@
-﻿const cheerio = require('cheerio');
-const Discord = require("discord.js")
-const rp = require('request-promise');
+﻿const Discord = require("discord.js")
 const config = require("./config.json");
 const fs = require("fs");
-const request = require("request");
 const bot = new Discord.Client();
 
 bot.commands = new Discord.Collection();
@@ -21,15 +18,11 @@ fs.readdir("./comandos/", (err, files) => {
 
 
         bot.on("ready", () => {
-            console.log(`bot foi iniciado, com ${bot.users.size} usuários, em ${bot.channels.size} canais, em ${bot.guilds.size} servidores.`);
-            bot.user.setPresence({
-
-                game: {
-                    name: 'Desenvolvimento do Servidor.',
-                    type: 0
-                }
+            console.log(`bot foi iniciado, com ${bot.users.cache.size} usuários, em ${bot.channels.cache.size} canais, em ${bot.guilds.cache.size} servidores.`);
+            bot.user.setActivity(`Smoke é God`, {
+                type: "PLAYING", url: "https://www.twitch.tv/"
+                 })
             });
-        });
 
 bot.on("message", async message => {
 
